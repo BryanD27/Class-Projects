@@ -1,4 +1,4 @@
-# Class-Projects
+# Projects
 
 Hello! My name is Bryan Dumond, a current CS Graduate Student in Northeastern University's Align Program. 
 
