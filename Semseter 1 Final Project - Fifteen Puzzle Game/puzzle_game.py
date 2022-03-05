@@ -127,10 +127,10 @@ class Tile:
 
         global game_board
             
-        print(f"You clicked on {self.name} at Cell {self.cell}")
-        print(f"Nested List Index: [{self.index_r}] [{self.index_c}]")
+        print(f"\nYou clicked on {self.name} at Cell {self.cell}")
+        print(f"Nested List Index: [{self.index_r}] [{self.index_c}]", end="")
         if self.is_blank() == True:
-            print("This is the blank")
+            print("\nThis is the blank", end="")
         print("")
         return game_board.switch_tiles(self)
         
@@ -495,7 +495,8 @@ class Board:
         blank_index = (blank.index_r, blank.index_c)
 
         if self.check_valid_switch(clicked_index , blank_index) == True:
-            
+
+            # First perform all the BTS logic to switch the tiles
             switched_out = self.board[blank.index_r][blank.index_c]
             
             self.board[blank.index_r][blank.index_c] = tile
@@ -506,7 +507,11 @@ class Board:
             self.player_moves += 1
             self.moves_left -= 1
 
+            # Now that logic is done, display results to user
+            print("You have made a move!")
             self.draw_updated_board(tile, switched_out)
+            
+
             
             self.check_end()
 
@@ -632,7 +637,7 @@ class Board:
 
 '''
 General Functions - These are functions outside of the Game and Tile classes that
-        deal with logic outside of the tile boeard itself.
+        deal with logic outside of the tile board itself.
 '''
 
 def generate_dict(address):
@@ -731,7 +736,7 @@ def press_quit(x,y):
     
     global screen
     
-    print("Clicked Quit\n")
+    print("\nClicked Quit")
 
     screen.clearscreen()
     
@@ -747,7 +752,7 @@ def press_reset(x,y):
         Returns -- Tells game_board object to call reset_board method
     '''
     
-    print("Clicked Reset\n")
+    print("\nClicked Reset")
     return game_board.reset_board()
 
 
@@ -756,7 +761,7 @@ def press_load(x,y):
     Callback Function -- Invoked by pressing Load button
         Returns -- Calls load_new_board() function
     '''
-    print("Clicked Load\n")
+    print("\nClicked Load")
     return load_new_board()
 
 
@@ -1052,11 +1057,11 @@ def error_logger(error : str):
         Parameters -- error -- a string (str) describing an issue from
             anotherfunction.
     '''
-    print(error + "\n")
+    print("\n" + error)
     with open("5001_puzzle.err", mode = "a") as error_file:
         error += "\n"
         error_file.write(error)
-    print("Error Puzz File Updated\n")
+    print("Error Puzz File Updated")
 
 
 def initial_setup():
