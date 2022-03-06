@@ -29,3 +29,7 @@ tiles are completely randomized and it is possible to be given an "unsolvable" b
 take into account which puzzle the user solved or how many moves they allowed themselves.
 
 
+3. All of the ".puz" files hold metadata that the Python program reads in order to determine the correct order of images that form an entire picture.
+The "malformed" puz files are intentionally modified versions of the proper puz files, designed to correctly invoke an error message ("Could not find/open puz file").
+
+
