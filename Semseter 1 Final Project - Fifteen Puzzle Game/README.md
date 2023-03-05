@@ -1,5 +1,4 @@
 # Description
------DESCRIPTION--------
 
 Created for CS 5001 - Intensive Foundations of Computer Science, Northeastern University, Fall 2021
 
@@ -10,7 +9,6 @@ leaderboard, and choose how many moves they're allowed before the game is over.
 Project intended to display proficiency with lists, loops, file-reading, exception handling, and simple object oriented design.
 
 # Instructions
------INSTRUCTIONS---------
 
 1. Download folder "Semester 1 Final Project - Fifteen Puzzle Game" and keep all contents organized as they are within the directory
 
@@ -20,7 +18,6 @@ Project intended to display proficiency with lists, loops, file-reading, excepti
 
 
 # Design Notes
--------DESIGN NOTES--------
 
 1. Use the "reset" button to automatically unscramble the puzzle. This is a "cheat code" of sorts in that the game still allows you 
 to make moves that count towards your score even after this button is pressed. This was done intentionally, since the board
