@@ -6,3 +6,5 @@
 2022-01-21 18:10:06.678186 Error: File 'leaderboard.txt' not found | LOCATION: get_leaderboard()
 2022-01-23 02:05:53.824592 Error: File 'leaderboard.txt' not found | LOCATION: get_leaderboard()
 2022-01-23 02:07:04.723066 Error: Tile Size '120' is invalid | LOCATION game_board.validate_puzz_file()
+2022-04-07 21:17:19.210316 Error: Tile Numbers '12' is invalid  | LOCATION game_board.validate_puzz_file()
+2023-07-20 21:49:26.157513 Error: 'Images/not_luigi/9.gif' path does not exist | LOCATION game_board.validate_puzz_file()
